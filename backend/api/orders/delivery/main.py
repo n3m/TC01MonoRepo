@@ -1,17 +1,17 @@
 from fastapi import APIRouter
 from fastapi.responses import Response
 
-from ..repository.main import OrdersCollectionBlueprint
+from ..usecase.main import OrdersUsecaseBlueprint
 
 class OrdersDelivery:
-    __ordersRepository: OrdersCollectionBlueprint | None = None
+    __ordersUsecase: OrdersUsecaseBlueprint | None = None
 
-    def __init__(self, ord: OrdersCollectionBlueprint):
-        self.__ordersRepository = ord
+    def __init__(self, ord: OrdersUsecaseBlueprint):
+        self.__ordersUsecase = ord
         
     def getOrders(self):
       try:
-        serv = self.__ordersRepository.find()
+        serv = self.__ordersUsecase.All()
         return serv
       except Exception as e:
         return {"error": str(e)}

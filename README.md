@@ -20,3 +20,6 @@
     5. El proyecto se correra en el puerto 3000 por default.
     6. Acceder a "localhost:3000/"
     7. Visualizar pagina
+
+# Commits Complementarios (despues de correo):
+    1. ea2 - Se agrego un usecase layer a la API para complementar

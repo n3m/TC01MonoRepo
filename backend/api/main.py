@@ -1,8 +1,11 @@
 from .orders.repository.main import NewOrdersCollection
+from .orders.usecase.main import NewOrdersUsecase
 from .orders.delivery.main import OrdersDelivery
 
 class API:
     __instance = None
+    __ordersCollection = None
+    __ordersUsecase = None
     ordersDelivery = None
     
     def __new__(cls):
@@ -13,6 +16,7 @@ class API:
 
     def __initialize(self):
         self.__ordersCollection = NewOrdersCollection()
-        self.ordersDelivery = OrdersDelivery(self.__ordersCollection)
+        self.__ordersUsecase = NewOrdersUsecase(self.__ordersCollection)
+        self.ordersDelivery = OrdersDelivery(self.__ordersUsecase)
         
         
