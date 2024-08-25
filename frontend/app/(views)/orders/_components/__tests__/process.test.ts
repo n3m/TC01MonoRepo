@@ -12,6 +12,7 @@ const mockStock: Record<string, StockBeer> = {
 test("[processOrders] Calculo de Subtotales", () => {
   const mockOrders: Orders[] = [
     {
+      _id: "1",
       created: "-",
       paid: false,
       subtotal: 0,
@@ -39,6 +40,7 @@ test("[processOrders] Calculo de Subtotales", () => {
 test("[processOrders] Calculo donde nos ponen una cerveza que no habiamos visto", () => {
   const mockOrdersWithUnknownItem: Orders[] = [
     {
+      _id: "1",
       created: "-",
       paid: false,
       subtotal: 0,
@@ -63,6 +65,7 @@ test("[processOrders] Calculo donde nos ponen una cerveza que no habiamos visto"
 test("[processOrders] Calculo de rondas sin cantidades de items", () => {
   const mockOrdersWithZeroQuantity: Orders[] = [
     {
+      _id: "1",
       created: "-",
       paid: false,
       subtotal: 0,
@@ -87,6 +90,7 @@ test("[processOrders] Calculo de rondas sin cantidades de items", () => {
 test("[processOrders] Calculo de multiples rounds", () => {
   const mockOrdersWithMultipleRounds: Orders[] = [
     {
+      _id: "1",
       created: "-",
       paid: false,
       subtotal: 0,
@@ -115,6 +119,7 @@ test("[processOrders] Calculo de multiples rounds", () => {
 test("[processOrders] Calculo sin rondas", () => {
   const mockOrdersWithNoRounds: Orders[] = [
     {
+      _id: "1",
       created: "-",
       paid: false,
       subtotal: 0,
