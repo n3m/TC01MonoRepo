@@ -23,3 +23,4 @@
 
 # Commits Complementarios (despues de correo):
     1. 061 - Se agrego un usecase layer a la API para complementar
+    2. a08 - Se agrego una versión de la API en Golang (el lenguaje que mas domino) para complementar (backend_golang) (funciona en el mismo puerto, asi que cualquiera que enciendan, funcionara)
